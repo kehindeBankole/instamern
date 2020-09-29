@@ -1,7 +1,8 @@
+require('dotenv').config()
 const mongoose = require('mongoose')
 const connectDB = () => {
     mongoose
-      .connect("mongodb+srv://kehinde:ayinke2013@insta.pynb3.mongodb.net/insta?retryWrites=true&w=majority", {
+      .connect(process.env.DB_URI, {
         useNewUrlParser: true,
         useCreateIndex: true,
         useFindAndModify: false,
