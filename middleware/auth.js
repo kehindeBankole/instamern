@@ -13,7 +13,7 @@ module.exports = function (req, res, next) {
     if (err) {
       return res.status(401).json({ err: "must log in" });
     }
-    console.log(payload);
+    // console.log(payload);
     req.user = payload;
   });
   next();

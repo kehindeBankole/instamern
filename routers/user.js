@@ -53,7 +53,10 @@ userRoute.post(
         msg: "user saved successfully",
         token,
       });
-    } catch (error) {}
+    } catch (error) {
+    return res.status(401).json({ error});
+
+    }
   }
 );
 module.exports = userRoute;

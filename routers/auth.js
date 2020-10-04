@@ -47,7 +47,7 @@ authRoute.post(
         { expiresIn: 360000 }
       );
       return res.status(200).json({
-        token,
+        token,user
       });
     } catch (error) {}
   }
